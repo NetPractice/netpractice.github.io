@@ -93,6 +93,13 @@ th {
 
 img {
   max-width:100%;
+  
+    background-image: url(http://fildelning.se/wp-content/uploads/2011/05/Google.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px -30px;
+    width: 200px;
+    height: 200px;
+
 }
 
 header {
