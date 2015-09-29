@@ -14,11 +14,13 @@
 
 
 <script>
-var price1 = 5;
-var price2 = 6;
+var price1 = Math.floor((Math.random() * 10) + 1);
+
+var price2 = Math.floor((Math.random() * 10) + 1);
+;
 var total = price1 + price2;
 document.getElementById("demo").innerHTML =
-"The total is: " + total;
+"What is: " + price1 + " " + price2;
 </script>
 <script>
 document.getElementById("p").style.fontSize = "small";
