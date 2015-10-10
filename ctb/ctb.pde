@@ -24,6 +24,8 @@ void draw() {
   
   if (first) {
     for (int i = 0; i<1; i++) {
+      text("Make\nEvery\nSquare\nWhite", 100, 25);}
+
       fakeClick();
     }
     first = false;
