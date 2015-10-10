@@ -34,8 +34,11 @@ void draw() {
   text("Level: " + level, 305, 75+boardheight);
   main.display();
   if (win()) {pause=true;}
-  fill(255, 255, 0);
-  if (pause) {text("BOARD \nCLEAR!\n\nANY \nKEY\nTO\nCONTINUE", 100, 25);}
+  if (pause) {
+    fill(100);
+    rect(100,40,170,300,11);
+    fill(255, 255, 0);
+    text("BOARD \nCLEAR!\n\\nCLICK \nHERE\nFOR\nLEVEL "+level, 100, 60);}
 }
 class Square {
   int state;
@@ -80,6 +83,10 @@ class Board {
   }
 }
 void mouseClicked() {
+  if (pause){
+    if ((mouseX>100)&&(mouseX<270)&&(mouseY>40)&&(mouseY<340)){keyPressed();}
+
+  }
   if (!pause) {
     if (((mouseY>main.ypos)&&(mouseY<main.ypos+main.bheight*main.squarepx))&&((mouseX>main.xpos)&&(mouseX<main.xpos+main.bwidth*main.squarepx))) {
       for (int i = 0; i<main.squares.size(); i++) {
