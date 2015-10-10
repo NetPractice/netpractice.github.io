@@ -18,7 +18,7 @@ boolean pause = false;
 int numclicks = 1;
 int numwide = 3;
 int numhigh = 4;
-Board main = new Board(300, 140.0, numwide, numhigh, boardheight/numhigh);
+Board main = new Board(300, 40.0, numwide, numhigh, boardheight/numhigh);
 
 void draw() {
   
@@ -30,12 +30,12 @@ void draw() {
   }
   background(0);
   fill(255, 255, 0);
-  text("C l e a r   t h e   B o a r d", 305, 120);
-  text("Level: " + level, 305, 175+boardheight);
+  text("C l e a r   t h e   B o a r d", 305, 20);
+  text("Level: " + level, 305, 75+boardheight);
   main.display();
   if (win()) {pause=true;}
   fill(255, 255, 0);
-  if (pause) {text("BOARD \nCLEAR!\n\nANY \nKEY\nTO\nCONTINUE", 100, 120);}
+  if (pause) {text("BOARD \nCLEAR!\n\nANY \nKEY\nTO\nCONTINUE", 100, 20);}
 }
 class Square {
   int state;
