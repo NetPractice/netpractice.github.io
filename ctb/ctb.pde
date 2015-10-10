@@ -21,7 +21,6 @@ int numhigh = 4;
 Board main = new Board(300, 40.0, numwide, numhigh, boardheight/numhigh);
 
 void draw() {
-  if (level==1){fill(255,255,0);text("Make\nEvery\nSquare\nWhite", 100, 25);}
   if (first) {
     for (int i = 0; i<1; i++) {
       fakeClick();
@@ -29,6 +28,7 @@ void draw() {
     first = false;
   }
   background(0);
+    if (level==1){fill(255,255,0);text("Make\nEvery\nSquare\nWhite", 100, 25);}
   fill(255, 255, 0);
   text("C l e a r   t h e   B o a r d", 305, 25);
   text("Level: " + level, 305, 75+boardheight);
