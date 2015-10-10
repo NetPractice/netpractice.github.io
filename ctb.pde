@@ -35,7 +35,7 @@ void draw() {
   main.display();
   if (win()) {pause=true;}
   fill(255, 255, 0);
-  if (pause) {text("BOARD \nCLEAR!\n\nANY \nKEY\nTO\nCONTINUE", 100, 20);}
+  if (pause) {text("BOARD \nCLEAR!\n\nANY \nKEY\nTO\nCONTINUE", 100, 25);}
 }
 class Square {
   int state;
