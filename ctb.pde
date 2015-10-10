@@ -5,7 +5,7 @@
 //LEVELS WILL CHANGE EVERY TIME YOU PLAY.
 
 void setup() {
-size(1000,700);
+size(1100,600);
   strokeWeight(5);
   fill(255);
   textSize(30);
