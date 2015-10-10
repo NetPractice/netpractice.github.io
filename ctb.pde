@@ -36,9 +36,9 @@ void draw() {
   if (win()) {pause=true;}
   if (pause) {
     fill(100);
-    rect(100,40,170,300,11);
+    rect(50,40,170,330,11);
     fill(255, 255, 0);
-    text("BOARD \nCLEAR!\n\\nCLICK \nHERE\nFOR\nLEVEL "+level, 100, 60);}
+    text("BOARD \nCLEAR!\n\\nCLICK \nHERE\nFOR\nLEVEL "+level, 100, 85);}
 }
 class Square {
   int state;
@@ -84,7 +84,7 @@ class Board {
 }
 void mouseClicked() {
   if (pause){
-    if ((mouseX>100)&&(mouseX<270)&&(mouseY>40)&&(mouseY<340)){keyPressed();}
+    if ((mouseX>50)&&(mouseX<270)&&(mouseY>40)&&(mouseY<370)){keyPressed();}
 
   }
   if (!pause) {
