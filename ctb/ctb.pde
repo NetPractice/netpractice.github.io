@@ -69,10 +69,10 @@ class Board {
     for (int i = 0; i<squares.size(); i++) {
       Square square = squares.get(i);
       if ((square.state==0)&&(square.col<255)) {
-        square.col+=15;
+        square.col+=5;
       }
       if ((square.state==1)&&(square.col>100)) {
-        square.col-=15;
+        square.col-=5;
       }
       fill(square.col);
       rect(square.xpos, square.ypos, square.pix, square.pix, 11);
