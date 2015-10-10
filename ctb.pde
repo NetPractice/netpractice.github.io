@@ -130,7 +130,7 @@ void keyPressed() {
     } else if (numclicks%5==1) {
       numhigh++;
     }
-    main = new Board(300, 140.0, numwide, numhigh, boardheight/numhigh);
+    main = new Board(300, 40.0, numwide, numhigh, boardheight/numhigh);
     ;
     for (int i = 0; i<level; i++) {
       fakeClick();
