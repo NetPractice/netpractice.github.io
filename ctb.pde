@@ -36,9 +36,9 @@ void draw() {
   if (win()) {pause=true;}
   if (pause) {
     fill(100);
-    rect(50,40,170,330,11);
+    rect(50,40,220,330,11);
     fill(255, 255, 0);
-    text("BOARD \nCLEAR!\n\\nCLICK \nHERE\nFOR\nLEVEL "+level, 100, 85);}
+    text("BOARD \nCLEAR!\n\nCLICK \nHERE\nFOR\nLEVEL "+level, 100, 85);}
 }
 class Square {
   int state;
