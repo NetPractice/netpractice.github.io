@@ -21,6 +21,7 @@ int numhigh = 4;
 Board main = new Board(300, 40.0, numwide, numhigh, boardheight/numhigh);
 
 void draw() {
+  
   if (first) {
     for (int i = 0; i<1; i++) {
       fakeClick();
@@ -28,14 +29,16 @@ void draw() {
     first = false;
   }
   background(0);
-    if (level==1){fill(255,255,0);text("Make\nEvery\nSquare\nWhite", 100, 25);}
   fill(255, 255, 0);
   text("C l e a r   t h e   B o a r d", 305, 25);
   text("Level: " + level, 305, 75+boardheight);
   main.display();
   if (win()) {pause=true;}
-  fill(255, 255, 0);
-  if (pause) {text("BOARD \nCLEAR!\n\nANY \nKEY\nTO\nCONTINUE", 100, 25);}
+  if (pause) {
+    fill(100);
+    rect(50,40,220,330,11);
+    fill(255, 255, 0);
+    text("BOARD \nCLEAR!\n\nCLICK \nHERE\nFOR\nLEVEL "+level, 100, 85);}
 }
 class Square {
   int state;
@@ -69,10 +72,10 @@ class Board {
     for (int i = 0; i<squares.size(); i++) {
       Square square = squares.get(i);
       if ((square.state==0)&&(square.col<255)) {
-        square.col+=5;
+        square.col+=15;
       }
       if ((square.state==1)&&(square.col>100)) {
-        square.col-=5;
+        square.col-=15;
       }
       fill(square.col);
       rect(square.xpos, square.ypos, square.pix, square.pix, 11);
@@ -80,6 +83,10 @@ class Board {
   }
 }
 void mouseClicked() {
+  if (pause){
+    if ((mouseX>50)&&(mouseX<270)&&(mouseY>40)&&(mouseY<370)){keyPressed();}
+
+  }
   if (!pause) {
     if (((mouseY>main.ypos)&&(mouseY<main.ypos+main.bheight*main.squarepx))&&((mouseX>main.xpos)&&(mouseX<main.xpos+main.bwidth*main.squarepx))) {
       for (int i = 0; i<main.squares.size(); i++) {
