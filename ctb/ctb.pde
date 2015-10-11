@@ -30,7 +30,7 @@ void draw() {
   }
   background(0);
   fill(255, 255, 0);
-  text("C l e a r   t h e   B o a r d", 305, 25);
+  text("F L I P   T O   W H I T E", 305, 25);
   text("Level: " + level, 305, 75+boardheight);
   main.display();
   if (win()) {pause=true;}
