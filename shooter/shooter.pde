@@ -1,5 +1,5 @@
 void setup(){
-  size(900,700);
+  size(900,600);
   background(0);
   loop();
   strokeWeight(3);
