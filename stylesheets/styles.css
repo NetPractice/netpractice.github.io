@@ -6,7 +6,6 @@ body {
   color:#777;
   font-weight:300;
   background-color:#000000;
-  background:"background.png";
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,7 +26,7 @@ h1 {
 }
 
 h2 {
-  color:#cccccc;
+  color:#393939;
 }
 
 h3, h4, h5, h6 {
