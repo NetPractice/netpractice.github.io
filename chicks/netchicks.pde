@@ -1,6 +1,6 @@
 PImage lc, bc, eg;
 void setup() {
-  size(800,500);
+  size(1000,600);
   stroke(155);
   strokeWeight(3);
   lc = loadImage("littlechick.gif");
@@ -42,9 +42,9 @@ void draw() {
       eggs.add(new Egg());
     }
     if (grates.size()==0) {
-      grates.add(new Grate(300,250,140,100));
+      grates.add(new Grate(200,150,140,100));
       grates.add(new Grate(700,300,100,80));
-      grates.add(new Grate(600,600,80,100));
+      grates.add(new Grate(500,500,80,100));
     }
     if (chicks.size()>0) {
       for (int i = chicks.size()-1; i >= 0; i--) {
