@@ -1,3 +1,8 @@
+/* @pjs preload="inside.jpg"; */
+/* @pjs preload="outside.png"; */
+/* @pjs preload="knife.png"; */
+
+
 PImage out, in, knife;
   PGraphics mask, smask;
 
