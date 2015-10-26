@@ -57,7 +57,7 @@
 		    
     var xA = -(accX / 10) * movement;
     var yA = -(accY / 10) * movement;
-    var amount = xA;
+    var amount = xA*100000+yA*1000;
          airconsole.message(AirConsole.SCREEN, amount)
 }
     
