@@ -7,14 +7,19 @@
   <script type="text/javascript">
     var air_console = new AirConsole();
 
+var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode("Hi there and greetings!"); 
+  
+  newDiv.appendChild(newContent); 
+    <div id="div1">The text above has been created.</div>
+
+//add the text node to the newly created div.
     // Listen for messages from other devices
+    
     air_console.onMessage = function(from, data) {
 
       // We receive a message -> Send message back to the device
-      air_console.message(from, "Full of pixels!");
-var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode("Hi there and greetings!"); 
-  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+      air_console.message(from, "Full of pixels!"); 
 
   // add the newly created element and its content into the DOM 
   var currentDiv = document.getElementById("div1"); 
@@ -22,8 +27,8 @@ var newDiv = document.createElement("div");
       // Show message on device screen
       var info = document.createElement('DIV');
       info.innerHTML = data;
-      document.getElementById('div1').innerHTML = data;
-      //document.body.appendChild(info);
+      document.getElementById('div').innerHTML = data;
+      document.body.appendChild(info);
     };
     </script>
 </html>
