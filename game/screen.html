@@ -1,6 +1,7 @@
   <!doctype html>
 
 <html>
+    <body>
       <div id="div1">The text above has been created.</div>
 
   <script type="text/javascript" src="http://www.airconsole.com/api/airconsole-1.2.1.js"></script>
@@ -27,9 +28,11 @@ var newDiv = document.createElement("div");
       // Show message on device screen
       
        var info = document.createElement('DIV');
-      info.innerHTML = data;
-      document.body.insertBefore("div1",info);
+     // info.innerHTML = data;
+     // document.body.insertBefore(newDiv,info);
+document.getElementById("div1").innerHTML = data;
 
     };
     </script>
+    </body>
 </html>
