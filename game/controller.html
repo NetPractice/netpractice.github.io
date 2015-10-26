@@ -58,7 +58,7 @@
     var xA = -(accX / 10) * movement;
     var yA = -(accY / 10) * movement;
     var amount = xA;
-         // airconsole.message(AirConsole.SCREEN, {move: amount})
+         airconsole.message(AirConsole.SCREEN, amount)
 }
     
     function move(amount) {
@@ -69,14 +69,14 @@
         _leftIsUp = isUp;
         _direction = (_leftIsUp ? 0 : -1) + (_rightIsUp ? 0 : 1);
         var direction = _direction;
-        airconsole.message(AirConsole.SCREEN, { setDirection: direction });
+        airconsole.message(AirConsole.SCREEN, "left");
     }
 
     function rightButtonChanged(isUp) {
         _rightIsUp = isUp;
         _direction = (_leftIsUp ? 0 : -1) + (_rightIsUp ? 0 : 1);
         var direction = _direction;
-        airconsole.message(AirConsole.SCREEN, { setDirection: direction });
+        airconsole.message(AirConsole.SCREEN, "right");
     }
 
     function menuItemSelected(isPlayMode) {
